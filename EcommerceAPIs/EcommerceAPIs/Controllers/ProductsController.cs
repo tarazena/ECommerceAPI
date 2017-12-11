@@ -22,7 +22,8 @@ namespace EcommerceAPIs.Controllers
 
             products = LoadJson();
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, products);
-            response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:8080");
+            if (Request.RequestUri.ToString() == "http://myecommerce.azurewebsites.net")
+                response.Headers.Add("Access-Control-Allow-Origin", "http://myecommerce.azurewebsites.net");
             response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
             
             return response;
