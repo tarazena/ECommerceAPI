@@ -15,3 +15,4 @@ C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPI
 C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\obj\Release\EcommerceAPIs.csproj.CoreCompileInputs.cache
 C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\obj\Release\EcommerceAPIs.dll
 C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\obj\Release\EcommerceAPIs.pdb
+C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\obj\Release\EcommerceAPIs.csprojResolveAssemblyReference.cache

@@ -1,7 +1,9 @@
 ﻿using EcommerceAPIs.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -22,30 +24,54 @@ namespace EcommerceAPIs.Controllers
 
             products = LoadJson();
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, products);
-            if (Request.RequestUri.ToString() == "http://myecommerce.azurewebsites.net")
+            if (Request.Headers.Host.Contains("localhost"))
+                response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:8080");
+            else
                 response.Headers.Add("Access-Control-Allow-Origin", "http://myecommerce.azurewebsites.net");
             response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-            
             return response;
         }
 
 
         public List<Product> LoadJson()
         {
-            var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = "EcommerceAPIs.Static.product-items.json";
-
-
             List<Product> items = new List<Product>();
-            string dir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-            using (StreamReader r = new StreamReader(stream))
+            try
             {
-                string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<Product>>(json);
-            }
+                var cb = new SqlConnectionStringBuilder();
+                cb.DataSource = ".database.windows.net";
+                cb.UserID = "";
+                cb.Password = "";
+                cb.InitialCatalog = "";
 
+                using (var connection = new SqlConnection(cb.ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT TOP 100 * FROM dbo.ProductsTable", connection))
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Product tempItem = new Product();
+                            tempItem.id = reader["Id"].ToString();
+                            tempItem.name = reader["Name"].ToString();
+                            tempItem.price = reader["Price"].ToString();
+                            tempItem.memory = reader["Memory"].ToString();
+                            tempItem.company = reader["Company"].ToString();
+                            tempItem.images = reader["Image"].ToString().Split(',').ToList();
+                            items.Add(tempItem);
+                        }
+                    }
+
+                }
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+                        
             return items;
         }
+
     }
 }

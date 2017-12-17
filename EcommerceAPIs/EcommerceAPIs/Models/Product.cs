@@ -7,10 +7,11 @@ namespace EcommerceAPIs.Models
 {
     public class Product
     {
-        public string Name { get; set; }
-        public string Image { get; set; }
-        public string Price { get; set; }
-        public string Memory { get; set; }
-        public string Company { get; set; }
+        public string id { get; set; }
+        public string name { get; set; }
+        public string price { get; set; }
+        public string memory { get; set; }
+        public string company { get; set; }
+        public List<string> images = new List<string>();
     }
 }
