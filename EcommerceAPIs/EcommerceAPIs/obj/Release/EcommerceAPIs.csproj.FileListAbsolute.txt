@@ -16,3 +16,6 @@ C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPI
 C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\obj\Release\EcommerceAPIs.dll
 C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\obj\Release\EcommerceAPIs.pdb
 C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\obj\Release\EcommerceAPIs.csprojResolveAssemblyReference.cache
+C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\bin\SendGrid.dll
+C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\bin\SendGrid.pdb
+C:\Users\theph\Desktop\New Vue App For Learning\API's\EcommerceAPIs\EcommerceAPIs\bin\SendGrid.xml

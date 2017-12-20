@@ -39,10 +39,10 @@ namespace EcommerceAPIs.Controllers
             try
             {
                 var cb = new SqlConnectionStringBuilder();
-                cb.DataSource = ".database.windows.net";
-                cb.UserID = "";
-                cb.Password = "";
-                cb.InitialCatalog = "";
+                cb.DataSource = System.Environment.GetEnvironmentVariable("SQLPRODUCTSDATASOURCE");
+                cb.UserID = System.Environment.GetEnvironmentVariable("SQLUSERID");
+                cb.Password = System.Environment.GetEnvironmentVariable("SQLPASSWORD");
+                cb.InitialCatalog = System.Environment.GetEnvironmentVariable("SQLPRODUCTSINITIALCATALOG");
 
                 using (var connection = new SqlConnection(cb.ConnectionString))
                 {
