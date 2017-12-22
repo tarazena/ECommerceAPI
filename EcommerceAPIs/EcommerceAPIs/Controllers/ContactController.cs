@@ -30,7 +30,7 @@ namespace EcommerceAPIs.Controllers
                     PlainTextContent = contact.Message,
                     HtmlContent = "<strong>Hello, Email!</strong>"
                 };
-                msg.AddTo(new EmailAddress(contact.Email, contact.FirstName +" " + contact.LastName));
+                msg.AddTo(new EmailAddress("tarazena@gmail.com", contact.FirstName +" " + contact.LastName));
                 var EMAILresponse = await client.SendEmailAsync(msg);
                 response = Request.CreateResponse(HttpStatusCode.OK);
             }
@@ -38,11 +38,6 @@ namespace EcommerceAPIs.Controllers
             {
                 response = Request.CreateResponse(HttpStatusCode.BadRequest);
             }
-
-            if (Request.Headers.Host.Contains("localhost"))
-                response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:8080");
-            else
-                response.Headers.Add("Access-Control-Allow-Origin", "http://myecommerce.azurewebsites.net");
             return response;
         }
     }
