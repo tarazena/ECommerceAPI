@@ -82,10 +82,13 @@ C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.Data.Edm.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.Data.OData.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.Data.Services.Client.dll
+C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.IdentityModel.Tokens.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.WindowsAzure.Configuration.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.WindowsAzure.Storage.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Newtonsoft.Json.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\SendGrid.dll
+C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\System.Net.Http.Formatting.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\System.Spatial.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\System.Web.Cors.dll
@@ -97,12 +100,15 @@ C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.Data.Edm.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.Data.OData.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.Data.Services.Client.xml
+C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.IdentityModel.Tokens.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.WindowsAzure.Configuration.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.WindowsAzure.Storage.pdb
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Microsoft.WindowsAzure.Storage.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\Newtonsoft.Json.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\SendGrid.pdb
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\SendGrid.xml
+C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\System.Spatial.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\System.Web.Http.Cors.xml
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\System.Net.Http.Formatting.xml
@@ -144,7 +150,6 @@ C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\ru\System.Spatial.resources.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\obj\Debug\EcommerceAPIs.csprojResolveAssemblyReference.cache
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\obj\Debug\EcommerceAPIs.csproj.CoreCompileInputs.cache
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\obj\Debug\EcommerceAPIs.dll
 C:\Users\theph\Desktop\MyEcommerce\API\ECommerceAPI\EcommerceAPIs\EcommerceAPIs\obj\Debug\EcommerceAPIs.pdb

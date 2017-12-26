@@ -1,5 +1,6 @@
 ﻿using EcommerceAPIs.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
@@ -20,10 +21,12 @@ namespace EcommerceAPIs.Controllers
         [Route("v1/getproductlist")]
         public HttpResponseMessage GetProductList()
         {
-            List<Product> products = new List<Product>();
+            //List<Product> products = new List<Product>();
 
-            products = LoadJson();
-            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, products);
+            //products = LoadJson();
+
+            string products = @"[{""images"":[""a_iphone_2g_1"",""a_iphone_2g_2"",""a_iphone_2g_3""],""id"":""1"",""name"":""iPhone"",""price"":""100"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_3g_1"",""a_iphone_3g_2"",""a_iphone_3g_3""],""id"":""2"",""name"":""iPhone 3G"",""price"":""110"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_4_1"",""a_iphone_4_2"",""a_iphone_4_3""],""id"":""3"",""name"":""iPhone 4"",""price"":""140"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_4_1"",""a_iphone_4_2"",""a_iphone_4_3""],""id"":""4"",""name"":""iPhone 4s"",""price"":""180"",""memory"":""32"",""company"":""Apple""},{""images"":[""a_iphone_5_1"",""a_iphone_5_2""],""id"":""5"",""name"":""iPhone 5"",""price"":""200"",""memory"":""64"",""company"":""Apple""},{""images"":[""a_iphone_6plus_1"",""a_iphone_6plus_2""],""id"":""6"",""name"":""iPhone 6 Plus"",""price"":""220"",""memory"":""128"",""company"":""Apple""},{""images"":[""a_iphone_6_1"",""a_iphone_6_2""],""id"":""7"",""name"":""iPhone 6"",""price"":""210"",""memory"":""128"",""company"":""Apple""},{""images"":[""a_iphone_2g_1"",""a_iphone_2g_2"",""a_iphone_2g_3""],""id"":""8"",""name"":""iPhone"",""price"":""100"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_3g_1"",""a_iphone_3g_2"",""a_iphone_3g_3""],""id"":""9"",""name"":""iPhone 3G"",""price"":""110"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_4_1"",""a_iphone_4_2"",""a_iphone_4_3""],""id"":""10"",""name"":""iPhone 4"",""price"":""140"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_4_1"",""a_iphone_4_2"",""a_iphone_4_3""],""id"":""11"",""name"":""iPhone 4s"",""price"":""180"",""memory"":""32"",""company"":""Apple""},{""images"":[""a_iphone_5_1"",""a_iphone_5_2""],""id"":""12"",""name"":""iPhone 5"",""price"":""200"",""memory"":""64"",""company"":""Apple""},{""images"":[""a_iphone_6plus_1"",""a_iphone_6plus_2""],""id"":""13"",""name"":""iPhone 6 Plus"",""price"":""220"",""memory"":""128"",""company"":""Apple""},{""images"":[""a_iphone_6_1"",""a_iphone_6_2""],""id"":""14"",""name"":""iPhone 6"",""price"":""210"",""memory"":""128"",""company"":""Apple""},{""images"":[""a_iphone_2g_1"",""a_iphone_2g_2"",""a_iphone_2g_3""],""id"":""15"",""name"":""iPhone"",""price"":""100"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_3g_1"",""a_iphone_3g_2"",""a_iphone_3g_3""],""id"":""16"",""name"":""iPhone 3G"",""price"":""110"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_4_1"",""a_iphone_4_2"",""a_iphone_4_3""],""id"":""17"",""name"":""iPhone 4"",""price"":""140"",""memory"":""16"",""company"":""Apple""},{""images"":[""a_iphone_4_1"",""a_iphone_4_2"",""a_iphone_4_3""],""id"":""18"",""name"":""iPhone 4s"",""price"":""180"",""memory"":""32"",""company"":""Apple""},{""images"":[""a_iphone_5_1"",""a_iphone_5_2""],""id"":""19"",""name"":""iPhone 5"",""price"":""200"",""memory"":""64"",""company"":""Apple""},{""images"":[""a_iphone_6plus_1"",""a_iphone_6plus_2""],""id"":""20"",""name"":""iPhone 6 Plus"",""price"":""220"",""memory"":""128"",""company"":""Apple""},{""images"":[""a_iphone_6_1"",""a_iphone_6_2""],""id"":""21"",""name"":""iPhone 6"",""price"":""210"",""memory"":""128"",""company"":""Apple""}]";
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, JArray.Parse(products));
             response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
             return response;
         }
