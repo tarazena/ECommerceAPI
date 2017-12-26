@@ -11,6 +11,10 @@ using Microsoft.WindowsAzure; // Namespace for CloudConfigurationManager
 using Microsoft.WindowsAzure.Storage; // Namespace for CloudStorageAccount
 using Microsoft.WindowsAzure.Storage.Blob; // Namespace for Blob storage types
 using System.IO;
+using System.Security.Cryptography;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 
 namespace EcommerceAPIs.Controllers
 {
@@ -47,6 +51,33 @@ namespace EcommerceAPIs.Controllers
             {
                 writer.Write(token);
             }
+        }
+
+        private string GenerateToken(string username, int expireMinutes = 30)
+        {
+            var hmac = new HMACSHA256();
+            var Secret = Convert.ToBase64String(hmac.Key);
+
+            var symmetricKey = Convert.FromBase64String(Secret);
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            var now = DateTime.UtcNow;
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                        {
+                        new Claim(ClaimTypes.Name, username)
+                    }),
+
+                Expires = now.AddMinutes(Convert.ToInt32(expireMinutes)),
+
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(symmetricKey), SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var stoken = tokenHandler.CreateToken(tokenDescriptor);
+            var token = tokenHandler.WriteToken(stoken);
+
+            return token;
         }
     }
 }
